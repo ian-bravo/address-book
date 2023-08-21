@@ -40,3 +40,23 @@ Contact.prototype.fullName = function () {
     return this.firstName + " " + this.lastName;
 };
 
+Contact.prototype.update = function (firstName, updatedFirstName) {
+    if (this.firstName !== updatedFirstName)
+        updatedFirstName = firstName;
+}
+
+Contact.prototype.update = function ({ updatedFirstName, updatedLastName, updatedNum }) {
+    if (updatedFirstName) {
+        this.firstName = updatedFirstName;
+    }
+
+    if (updatedLastName) {
+        this.lastName = updatedLastName;
+    }
+
+    if (updatedNum) {
+        this.phoneNumber = updatedNum;
+    }
+
+};
+
